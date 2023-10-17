@@ -1,0 +1,102 @@
+@font-face {
+    font-display: swap;
+    font-family: Benderos;
+    font-style: normal;
+    src: url(../fonts/Bender.woff2) format("woff2"),url(../fonts/Bender.woff) format("woff")
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Industry";
+    font-style: normal;
+    src: url(../fonts/Industry-Bold.woff) format("woff")
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Industry Black";
+    font-style: normal;
+    src: url(../fonts/Industry-Black.woff) format("woff")
+}
+
+* {
+    font-family: Benderos, sans-serif;
+}
+
+ body {
+    overflow: hidden;
+    background-color: #111111;
+    max-width: 320px;
+    width: 320px;
+    max-height: 400px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    box-sizing: inherit;
+    margin: 0;
+} 
+
+.header {
+    color: #ffffff;
+    text-align: center;
+    font-size: 27px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: rgba(10, 10, 10, 0.76);
+}
+
+.header p {
+    font-family: Industry, sans-serif;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+    margin: 0;
+}
+a {
+    text-decoration: none;
+}
+
+.reportedlocation {
+    letter-spacing: 1px;
+    font-family: Industry Black, sans-serif;
+    color: white;
+    font-size: 32px;
+}
+
+.data {
+    position: absolute;
+    top: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.reportedago {
+    color: white;
+    font-size: 16px;
+}
+
+.logolink {
+    padding: 10px 5px 10px 5px;
+    background-color: rgba(10, 10, 10, 0.76);
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    width: 180px;
+}
+
+.pozadi {
+    width: 100%;
+    height: 100%;
+}
