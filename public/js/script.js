@@ -9,11 +9,11 @@ let data = null; // Define data in the outer scope
 
 socket.addEventListener('message', (event) => {
   data = JSON.parse(event.data); // Update data
-  reportedLocation.textContent = data.location;
-  pozadiImage.src = `./public/img/${data.location}.webp`;
+  reportedLocation.textContent = data.pvp.location;
+  pozadiImage.src = `./public/img/${data.pvp.location}.webp`;
 
-  if (data.reported) {
-    timeAgo = calculateTimeAgo(data.reported);
+  if (data.pvp.reported) {
+    timeAgo = calculateTimeAgo(data.pvp.reported);
     dataReceived = true;
   } else {
     dataReceived = false;
@@ -61,8 +61,8 @@ function updateReportedAgo() {
 updateReportedAgo();
 
 setInterval(() => {
-  if (dataReceived && data.reported) {
-    timeAgo = calculateTimeAgo(data.reported);
+  if (dataReceived && data.pvp.reported) {
+    timeAgo = calculateTimeAgo(data.pvp.reported);
   }
   updateReportedAgo();
 }, 1000);
